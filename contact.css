@@ -1,0 +1,401 @@
+/* ------------------------- */
+/* --- 1. GLOBAL STYLES & RESET --- */
+/* ------------------------- */
+
+/* Define variables for colors and fonts for easy maintenance */
+:root {
+    --primary-color: #0023d3;
+    --secondary-color: #c4e3f0;
+    --accent-color: #ff523b;
+    --text-color: #333;
+    --light-bg-color: #fff;
+    --footer-bg-color: #ffe4e4;
+    --font-family: "Poppins", sans-serif;
+}
+
+/* A modern CSS reset to ensure consistent styling across browsers */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--text-color);
+    background: radial-gradient(circle, var(--light-bg-color), var(--secondary-color));
+}
+
+/* Custom Scrollbar - kept from original design */
+body::-webkit-scrollbar {
+    width: 11px;
+}
+body::-webkit-scrollbar-track {
+    background: linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgb(0, 35, 211) 70%);
+}
+body::-webkit-scrollbar-thumb {
+    background: #470202;
+    border-radius: 8px;
+}
+
+/* General container to center content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #8d5151;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------- */
+/* --- 2. HEADER & NAVIGATION --- */
+/* ------------------------- */
+
+.header {
+    background: radial-gradient(circle, var(--light-bg-color), var(--secondary-color));
+    padding: 10px 0;
+    position: fixed; 
+    top: 0;
+    left:0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 5px 10px;
+}
+.hamburger-menu {
+    display: none; /* Desktop par hide rahega */
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 25px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+}
+
+/* Icon ki teen lines (bars) */
+.hamburger-menu .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+.banner-image-container {
+    width: 100%;
+}
+
+.banner-image-container img {
+    width: 100%;      
+    height: auto;     
+    display: block;
+   
+}
+
+/* contact.css */
+
+/* === CONTACT PAGE FINAL STYLES === */
+main {
+    padding-top: 48px;
+}
+
+.contact-section {
+    padding: 50px 20px;
+}
+
+.contact-section h1 {
+    text-align: center;
+    font-size: 2.2rem; /* Heading chhota kiya gaya hai */
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.contact-intro {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3, .contact-form h3 {
+    font-size: 1.6rem; /* Heading chhota kiya gaya hai */
+    margin-bottom: 25px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+.info-item {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+    /* Yeh lambi line ko break karne ke liye hai */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+}
+
+.info-item .icon {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.contact-form {
+    flex: 1.5;
+    min-width: 300px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 35, 211, 0.2);
+}
+
+.btn {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c5d9f1;
+  color:#ff532b;
+  transform: scaleX(2);
+  transform: scaley(1.1);
+  box-shadow: 2px 2px 20px rgb(49, 49, 4)
+}
+
+/* === MAP STYLING === */
+.map-section {
+    padding: 50px 20px;
+}
+
+.map-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+/* Map ko card jaisa look dene ke liye */
+.map-container {
+    border-radius: 10px;
+    overflow: hidden; /* Yeh iframe ke corners ko gol karega */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* ------------------------- */
+/* --- 4. FOOTER --- */
+/* ------------------------- */
+
+.footer {
+    background: var(--footer-bg-color);
+    padding: 40px 0;
+    color: #5b4d4d;
+}
+
+/* Flexbox for footer columns */
+.footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-col {
+    flex: 1; /* Each column takes equal space */
+}
+
+.footer-col h4 {
+    color: red;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col address {
+    font-style: normal;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+/* ------------------------------------- */
+/* --- 5. MEDIA QUERIES (RESPONSIVENESS) --- */
+/* ------------------------------------- */
+
+/* TABLET AUR MOBILE VIEW KE LIYE (768px se kam screen par) - COMBINED & CORRECTED */
+@media (max-width: 768px) {
+    
+    /* Responsive styles for content */
+    .main-content-wrapper {
+        flex-direction: column; /* Stacks the about and news sections */
+    }
+
+    .footer-wrapper {
+        flex-direction: column; /* Stacks footer columns */
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Hamburger Menu Styles */
+    
+    /* Nav links ko default roop se chhupa dein (Corrected Selector) */
+    .navbar .nav-links {
+        display: none; /* Menu ko hide kar dein */
+        position: absolute;
+        top: 50px; /* Header ki height ke anusaar adjust karein */
+        right: 0;
+        background-color: white;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    /* Jab menu khulega (active class add hone par) to aisa dikhega */
+    .navbar .nav-links.active {
+        display: flex; /* Menu ko dikhayein */
+    }
+
+    .navbar .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    /* Hamburger icon ko mobile par dikhayein */
+    .hamburger-menu {
+        display: flex;
+    }
+    .contact-wrapper {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    /* Yeh dono lines Form aur Address ke box ko overflow hone se rokengi */
+    .contact-info, .contact-form {
+        width: 100%;
+        min-width: auto; /* min-width ko reset karega */
+    }
+
+    .contact-section {
+        padding: 40px 10px;
+    }
+
+    /* Yeh Address ke text ko line break karne ke liye hai */
+    .info-item span {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+    }
+}
+
+
