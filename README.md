@@ -51,7 +51,7 @@ To get a local copy up and running, follow these simple steps.
 ## 🌐 Live Demo
 
 
-[View Live Demo]([...Apni website ka live link yahan daalein...])
+[View Live Demo](https://amanbkp.github.io/College_Website/)
 
 ---
 
