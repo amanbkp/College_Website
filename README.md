@@ -60,7 +60,7 @@ To get a local copy up and running, follow these simple steps.
 **[Aman Kumar]**
 
 -   GitHub: [@amanbkp](https://github.com/amanbkp)
--   LinkedIn: [Aman Kumar]([https://www.linkedin.com/in/amankumarydv/])
+-   LinkedIn: [Aman Kumar](https://www.linkedin.com/in/amankumarydv/)
 
 ---
 
